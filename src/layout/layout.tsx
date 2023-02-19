@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import styled from 'styled-components';
 
 const StyledLayout = styled.div`
@@ -22,6 +22,11 @@ export default function Layout() {
     <StyledLayout>
       <header>Header</header>
       <main>
+        <Link to='page1'>page1</Link>
+        <br />
+        <br />
+        <br />
+        <Link to='page2'>page2</Link>
         <Outlet />
       </main>
       <footer>Footer</footer>

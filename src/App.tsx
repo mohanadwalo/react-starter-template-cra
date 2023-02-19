@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import './App.css';
 
@@ -7,6 +7,8 @@ import { theme } from './layout/theme';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/home';
 import Layout from './layout/layout';
+import { Page1 } from './pages/page1';
+import { Page2 } from './pages/page2';
 
 function App() {
   return (
@@ -15,7 +17,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Layout />}>
-            <Route index element={<Home />} />
+            <Route path='page1' element={<Page1 />} />
+            <Route path='page2' element={<Page2 />} />
           </Route>
         </Routes>
       </BrowserRouter>
